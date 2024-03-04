@@ -1,0 +1,60 @@
+body{
+  min-height: 100%;
+  height: 100%;
+}
+
+.clearfix::after{
+  content: '';
+  display: block;
+  margin: both;
+}
+
+/* wrapperクラスを中央揃え */
+.wrapper{
+  width: 400px;
+  margin: 0 auto;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+/* headerクラス作成 */
+.header{
+  width: 400px;   /* 幅指定 */
+  height: 100px;  /* 高さ指定 */
+  background-color: #141f40;  /* 背景カラー指定 */
+}
+/* contentsクラスの高さ指定 */
+.contents{
+  width: 400px;
+  height: 250px;  /* 高さ指定 */
+} 
+
+/* leftクラス作成 */
+.left{
+  float: left;
+  width: 150px;   /* 幅指定 */
+  height: 100%;
+  background-color: #80bfa8;    /* 背景カラー指定 */
+}
+
+/* rightクラス作成 */
+.right{
+  float: left; 
+  width: 250px;   /* 幅指定 */
+  height: 100%;   /* 高さ指定*/
+  background-color: #8c2727;    /* 背景カラー指定 */
+}
+
+/* フッタークラス作成 */
+.footer{
+  width: 100%;    /* 幅指定 */
+  height: 100px;  /* 高さ指定*/
+  background-color: #d98d30;  /* 背景カラー指定*/
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
