@@ -1,0 +1,48 @@
+<!DOCTYPEhtml>
+	<htmlxmlns:th="http: //www.thymeleaf.org">
+
+		<head>
+			<metacharset="UTF8">
+				<metaname="viewport"content="width=devicewidth,initialscale=1">
+					<linkth:href="@{ /webjars/bootstrap/css/bootstrap.min.css}"rel="stylesheet">
+						<title>Title</title>
+		</head>
+		<bodyclass="bgbodytertiary">
+			<divclass="container">
+				<divclass="rowjustifycontentcenter">
+					<divclass="colmd8">
+						<h4class="borderbottommy3"th:text="#{invoice}">
+							</h4>
+							<pclass="textdanger"th:text="#{confirmationMessage}">
+								</p>
+								<divth:object="${invoice}">
+									<divclass="mb3">
+										<labelfor="name"th:text="#{name}"></label>
+											<inputtype="text"class="formcontrol"th:field="*{name}"disabled>
+												</div>
+												<divclass="mb3">
+													<labelfor="address"th:text="#{address}"></label>
+														<inputtype="text"class="formcontrol"th:field="*{address}"disabled>
+															</div>
+															<labelfor="phoneNumber"th:text="#{phoneNumber}"></label>
+																<inputtype="tel"class="formcontrol"th:field="*{phoneNumber}"disabled>
+																	</div>
+																	<divclass="mb3">
+																		<labelfor="price"th:text="#{price}"></label>
+																			<inputtype="text"class="formcontrol"th:field="*{price}"disabled>
+																				</div>
+																				<divclass="mb3">
+																					<labelfor="paymentDeadline"th:text="#{paymentDeadline}">
+																						</label>
+																						<inputtype="date"class="formcontrol"th:field="*{paymentDeadline}"disabled>
+																							</div>
+																							</div>
+																							</div>
+																							</div>
+																							</div>
+																							<scriptth:src="@{
+																								/webjars/bootstrap/js/bootstrap.bundle.min.js}">
+																								</script>
+																								</body>
+
+																								</html>
