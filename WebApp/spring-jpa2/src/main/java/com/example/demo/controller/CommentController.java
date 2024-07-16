@@ -10,33 +10,30 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.model.Comment;
 import com.example.demo.repository.CommentRepository;
 
-
-
-
 @Controller
 
 public class CommentController {
-    
+
     private final CommentRepository repository;
-    
+
     public CommentController(CommentRepository repository) {
-        this.repository=repository;
+        this.repository = repository;
     }
-    
+
     @GetMapping("/")
-    public String getAllComments(Comment comment,Model model) {
-        model.addAttribute("comments",repository.findAll());
+    public String getAllComments(Comment comment, Model model) {
+        model.addAttribute("comments", repository.findAll());
         return "list";
     }
-    
+
     @PostMapping("/add")
-    public String addComment(@Validated Comment comment,BindingResult result,Model model) {
-        model.addAttribute("comments",repository.findAll());
-        if(result.hasErrors()) {
+    public String addComment(@Validated Comment comment, BindingResult result, Model model) {
+        model.addAttribute("comments", repository.findAll());
+        if (result.hasErrors()) {
             return "list";
         }
         repository.save(comment);
         return "redirect:/";
     }
-    
+
 }
