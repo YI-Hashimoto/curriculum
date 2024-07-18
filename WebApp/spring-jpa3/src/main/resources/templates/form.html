@@ -26,8 +26,7 @@
                 </h6>
               </div>
               <div class="card-body">
-                <form th:action="@{/process}" th:object="${employee}"
-                  method="post">
+                <form th:action="@{/process}" th:object="${employee}" method="post">
                   <input type="hidden" th:field="*{id}">
 
                   <div class="mb-3">
